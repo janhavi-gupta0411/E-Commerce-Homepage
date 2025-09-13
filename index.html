@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .hero-section {
+      display: flex;
+      gap: 20px; 
+      padding: 20px;
+      flex-wrap: wrap; 
+    }
+
+    .hero {
+      position: relative;
+      flex: 2; 
+      min-width: 300px;
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+      border-radius: 1.5rem;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem); 
+      font-weight: 200;
+      margin: 0;
+    }
+
+    .hero p {
+      margin: 15px 0;
+      font-size: clamp(0.8rem, 1.2vw, 1rem);
+    }
+
+    .hero button {
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 20rem;
+      background: black;
+      color: white;
+      font-size: clamp(0.6rem, 1vw, 0.9rem);
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background: gray;
+    }
+
+  
+    .side-images {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 250px;
+      
+    }
+
+    .image-card {
+      position: relative;
+    }
+
+    .image-card img {
+      width: 100%;
+      border-radius: 1.5rem;
+      display: block;
+    }
+
+    .image-card h2 {
+      position: absolute;
+      top: 10%;
+      left: 8%;
+      margin: 0;
+      color: white;
+      font-size: clamp(1.2rem, 2vw, 2rem);
+      font-weight: 100;
+      color: black;
+    }
+
+    
+    @media (max-width: 900px) {
+      .hero-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side-images {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .side-images .image-card {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-content {
+        top: 5%;
+        left: 5%;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .hero button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .side-images {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div><p>SleekSelects</p></div>
+    <div><input type="search"></div>
+    <div><p>Home</p><div>
+    <div><p>Shop</p></div>
+    <div><p>Product</p></div>
+    <div><p>Contact Us</p></div>
+  </div>
+  <div class="hero-section">
+    <section class="hero">
+      <img src="images/3071b1fc729091cd0452fb9d0b89106ceec16368.png" alt="Summer Outfit">
+      
+      <div class="hero-content">
+        <h1>
+          Color of <br>
+          Summer<br>
+          Outfit
+        </h1>
+        <p>
+          100+ Collections for your outfit <br> inspirations in this summer
+        </p>
+        <button>
+          VIEW COLLECTIONS
+        </button>
+      </div>
+    </section>
+
+   
+    <div class="side-images">
+      <div class="image-card">
+        <img src="images/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Small Image 1">
+        <h2>Outdoor <br>Active</h2>
+      </div>
+      <div class="image-card">
+        <img src="images/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Small Image 2">
+        <h2>Casual <br>Comfort</h2>
+      </div>
+    </div>
+  </div>
+  <hr>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Screen Mobile Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    /* Fullscreen menu */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      padding: 15px;
+      box-sizing: border-box;
+      overflow-y: auto; /* scroll if content is tall */
+    }
+
+    /* Header */
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .menu-header h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .menu-header i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Search */
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 6px 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-box i {
+      color: #777;
+      margin-right: 8px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    /* Menu Items */
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .menu ul li {
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    /* Cart & Wishlist */
+    .extras {
+      margin-top: 40px;   /* space added */
+      margin-bottom: 25px;
+    }
+
+
+    .extra-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      font-size: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .extra-item img{
+      margin-left: 6px;
+    }
+
+    .badge {
+      background: black;
+      color: white;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+    /* Sign in button */
+    button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: black;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* Social icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .social-icons img {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <!-- Header -->
+    <div class="menu-header"> 
+      <h3>SleekSelects</h3>
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <!-- Search -->
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search">
+    </div>
+
+    <!-- Menu List -->
+    <ul>
+      <li>Home</li>
+      <li>Shop <i class="fa-solid fa-chevron-down"></i></li>
+      <li>Product <i class="fa-solid fa-chevron-down"></i></li>
+      <li>Contact Us</li>
+    </ul>
+
+    <!-- Cart & Wishlist -->
+    <div class="extras">
+      <div class="extra-item">
+        <span>Cart</span>
+        <span><img src="icons/8666616_shopping_cart_icon 1.png"><span class="badge">2</span></span>
+      </div>
+      <div class="extra-item">
+        <span>Wishlist</span>
+        <span><img src="icons/coolicon copy.png"><span class="badge">2</span></span>
+      </div>
+    </div>
+
+    <!-- Sign in -->
+    <button>Sign In</button>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <img src="icons/instagram.png">
+
+      <img src="icons/facebook.png">
+      <img src="icons/youtube.png">
+    </div>
+  </div>
+</body>
+</html>

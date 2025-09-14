@@ -3,13 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <title>E-Commerce Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #fafafa;
     }
 
-    
+    /* ================= DESKTOP HEADER ================= */
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; 
+      align-items: center;  
+      padding: 15px 25px;
+      gap: 15px;             
+      background: #f9f9f9;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .header img {
+      width: 120px;
+      margin-left: 100px;
+      cursor: pointer;
+    }
+
+    .header h2 {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    /* SEARCH BAR STYLE */
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      padding: 8px 15px;
+      width: 300px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .search-box i {
+      color: #888;
+      cursor: pointer;
+    }
+
+    /* ================= MOBILE HEADER ================= */
+    .mobile-header {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-header .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-header .logo {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .mobile-header .user-icon img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO SECTION ================= */
     .hero-section {
       display: flex;
       gap: 20px; 
@@ -61,14 +141,12 @@
       background: gray;
     }
 
-  
     .side-images {
       flex: 1; 
       display: flex;
       flex-direction: column;
       gap: 20px;
       min-width: 250px;
-      
     }
 
     .image-card {
@@ -86,95 +164,223 @@
       top: 10%;
       left: 8%;
       margin: 0;
-      color: white;
       font-size: clamp(1.2rem, 2vw, 2rem);
       font-weight: 100;
       color: black;
     }
 
-    
+    /* ================= TRENDING SECTION ================= */
+    .trending-section {
+      padding: 30px;
+    }
+
+    .trending-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .trending-header p {
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: auto;
+    }
+
+    .trending-header button {
+      border: none;
+      background: #f2f2f2;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .trending-grid1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .trending-grid2 {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .card {
+      position: relative;
+      background: transparent;
+      border-radius: 20px;
+      
+      text-align: center;
+    }
+
+    .small img {
+      width: 100%;
+      height: 250px;
+      
+      display: block;
+      border-radius: 20px;
+    }
+
+    .big img {
+      width: 100%;
+      height: 250px;
+      display: block;
+      border-radius: 20px;
+
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Wishlist heart button */
+    .wishlist {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      border-radius: 50%;
+      padding: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .wishlist i {
+      color: #888;
+    }
+
+    .wishlist.active i {
+      color: red;
+    }
+
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
-      .hero-section {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .side-images {
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .side-images .image-card {
-        flex: 1;
-      }
+      .header { display: none; }
+      .mobile-header { display: flex; }
+      .hero-section { flex-direction: column; align-items: center; }
+      .side-images { flex-direction: row; justify-content: center; }
+      .side-images .image-card { flex: 1; }
+      .trending-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
-      .hero-content {
-        top: 5%;
-        left: 5%;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 0.9rem;
-      }
-
-      .hero button {
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
-      }
-
-      .side-images {
-        flex-direction: column;
-        gap: 15px;
-      }
+      .trending-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <div>
-    <div><p>SleekSelects</p></div>
-    <div><input type="search"></div>
-    <div><p>Home</p><div>
+  <!-- DESKTOP HEADER -->
+  <div class="header">
+    <div><h2>SleekSelects</h2></div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search here">
+      <i class="fa fa-search"></i>
+    </div>
+
+    <div><p>Home</p></div>
     <div><p>Shop</p></div>
     <div><p>Product</p></div>
     <div><p>Contact Us</p></div>
+    <div><img src="icons/Icon.png" alt="User Icon"></div>
   </div>
+
+  <!-- MOBILE HEADER -->
+  <div class="mobile-header">
+    <div class="menu-icon">
+      <a href="menu.html"><img src="icons/tabler-icon-menu-2.png" alt="menu"></a>
+    </div>
+    <div class="logo">SleekSelects</div>
+    <div class="user-icon">
+      <img src="icons/user.png" alt="User Icon">
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
   <div class="hero-section">
     <section class="hero">
       <img src="images/3071b1fc729091cd0452fb9d0b89106ceec16368.png" alt="Summer Outfit">
-      
       <div class="hero-content">
-        <h1>
-          Color of <br>
-          Summer<br>
-          Outfit
-        </h1>
-        <p>
-          100+ Collections for your outfit <br> inspirations in this summer
-        </p>
-        <button>
-          VIEW COLLECTIONS
-        </button>
+        <h1>Color of <br> Summer<br> Outfit</h1>
+        <p>100+ Collections for your outfit <br> inspirations in this summer</p>
+        <button>VIEW COLLECTIONS</button>
       </div>
     </section>
 
-   
     <div class="side-images">
       <div class="image-card">
-        <img src="images/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Small Image 1">
+        <img src="images/17aa3a2f29a85f64d93c41afa6b64d31b3a88038.png" alt="Outdoor Active">
         <h2>Outdoor <br>Active</h2>
       </div>
       <div class="image-card">
-        <img src="images/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Small Image 2">
+        <img src="images/837e11f00233936f837e7b69d6a545511b1ba132.png" alt="Casual Comfort">
         <h2>Casual <br>Comfort</h2>
       </div>
     </div>
   </div>
+
   <hr>
+
+  <!-- TRENDING SECTION -->
+  <div class="trending-section">
+    <div class="trending-header">
+      <p>Trending</p>
+      <button>SHORTS</button>
+      <button>JACKETS</button>
+      <button>SHOES</button>
+    </div>
+
+    <div class="trending-grid1">
+      <div class="card small">
+        <img src="images/5a88e5962507976b1988e6d9a08599fcba5247bd.png">
+        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+        <h3>Casual Shoe</h3>
+        <p>$225</p>
+      </div>
+      <div class="card small">
+        <img src="images/0b42775b5c482fd10ff96fad137ae5ca5aa7a561.png">
+        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+        <h3>Skateboard Shoe</h3>
+        <p>$125</p>
+      </div>
+      <div class="card big">
+        <img src="images/7150a0e902536ab1a554d315fc11f4ef6f9c1302.png">
+        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+        <h3>Skateboard Shoe</h3>
+        <p>$125</p>
+      </div>
+    </div>
+    <div class="trending-grid2">
+      <div class="card big">
+        <img src="images/c8c225ce10fd34a19ed897401decf4c2dd4806d5.png">
+        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+        <h3>Skateboard Shoe</h3>
+        <p>$125</p>
+      </div>
+      <div class="card small">
+        <img src="images/6202a986df950869c406241f2f48f416d0807241.png">
+        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+        <h3>Basket Shoe</h3>
+        <p>$125</p>
+      </div>
+      <div class="card small">
+        <img src="images/f8ae4065476b2a224ae85cd40fd6b1c7d34bc9ae.png">
+        <div class="wishlist"><i class="fa-regular fa-heart"></i></div>
+        <h3>Sportwear Shoe</h3>
+        <p>$159</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

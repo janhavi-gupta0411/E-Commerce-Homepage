@@ -11,7 +11,6 @@
       background: #f9f9f9;
     }
 
-    /* Fullscreen menu */
     .menu {
       position: fixed;
       top: 0;
@@ -21,10 +20,9 @@
       background: #fff;
       padding: 15px;
       box-sizing: border-box;
-      overflow-y: auto; /* scroll if content is tall */
+      overflow-y: auto;
     }
 
-    /* Header */
     .menu-header {
       display: flex;
       justify-content: space-between;
@@ -38,12 +36,6 @@
       font-weight: bold;
     }
 
-    .menu-header i {
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    /* Search */
     .search-box {
       display: flex;
       align-items: center;
@@ -65,7 +57,6 @@
       font-size: 14px;
     }
 
-    /* Menu Items */
     .menu ul {
       list-style: none;
       padding: 0;
@@ -80,11 +71,10 @@
       align-items: center;
       font-size: 15px;
       cursor: pointer;
-    }
+    } 
 
-    /* Cart & Wishlist */
     .extras {
-      margin-top: 40px;   /* space added */
+      margin-top: 40px;  
       margin-bottom: 25px;
     }
 
@@ -111,7 +101,6 @@
       margin-left: 5px;
     }
 
-    /* Sign in button */
     button {
       display: block;
       width: 100%;
@@ -127,7 +116,6 @@
       text-decoration: none;
     }
 
-    /* Social icons */
     .social-icons {
       display: flex;
       justify-content: center;
@@ -143,19 +131,16 @@
 </head>
 <body>
   <div class="menu">
-    <!-- Header -->
     <div class="menu-header"> 
       <h3>SleekSelects</h3>
-      <i class="fa-solid fa-xmark"></i>
+      <img src="icons/Line.png">
     </div>
 
-    <!-- Search -->
     <div class="search-box">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" placeholder="Search">
     </div>
 
-    <!-- Menu List -->
     <ul>
       <li>Home</li>
       <li>Shop <i class="fa-solid fa-chevron-down"></i></li>
@@ -163,7 +148,6 @@
       <li>Contact Us</li>
     </ul>
 
-    <!-- Cart & Wishlist -->
     <div class="extras">
       <div class="extra-item">
         <span>Cart</span>
@@ -175,10 +159,8 @@
       </div>
     </div>
 
-    <!-- Sign in -->
     <button>Sign In</button>
 
-    <!-- Social Icons -->
     <div class="social-icons">
       <img src="icons/instagram.png">
 

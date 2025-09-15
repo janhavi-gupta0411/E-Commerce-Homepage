@@ -334,8 +334,7 @@ body {
 .testimoni-section img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  object-position: left;  
+  object-fit: cover; 
   display: block;
 }
 
@@ -351,12 +350,12 @@ body {
 .testimoni-section-para h2 {
   font-size: 4rem;
   font-weight: 600;
-  margin: 10px 0;
+  margin: 2rem 0;
 }
 
 .testimoni-section-para p {
   font-size: 1rem;
-  line-height: 1.4;
+  
 }
 
 

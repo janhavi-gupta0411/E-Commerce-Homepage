@@ -4,273 +4,7 @@
   <meta charset="UTF-8">
   <title>E-Commerce Homepage</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-    }
-
-    .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; 
-      align-items: center;  
-      padding: 15px 25px;
-      gap: 15px;             
-      background: #f9f9f9;
-    }
-
-    .header p {
-      margin: 0;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .header img {
-      width: 120px;
-      margin-left: 100px;
-      cursor: pointer;
-    }
-
-    .header h2 {
-      margin: 0;
-      cursor: pointer;
-    }
-
-    .search-box {
-      display: flex;
-      align-items: center;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 30px;
-      padding: 8px 15px;
-      width: 300px;
-    }
-
-    .search-box input {
-      border: none;
-      outline: none;
-      flex: 1;
-      font-size: 16px;
-    }
-
-    .search-box i {
-      color: #888;
-      cursor: pointer;
-    }
-
-    .mobile-header {
-      display: none;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 25px;
-      background: #fff;
-      border-bottom: 1px solid #eee;
-    }
-
-    .mobile-header .menu-icon {
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .mobile-header .logo {
-      font-size: 22px;
-      font-weight: 700;
-    }
-
-    .mobile-header .user-icon img {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-    }
-
-    .hero-section {
-      display: flex;
-      gap: 20px; 
-      padding: 20px;
-      flex-wrap: wrap; 
-    }
-
-    .hero {
-      position: relative;
-      flex: 2; 
-      min-width: 300px;
-    }
-
-    .hero img {
-      width: 100%;
-      display: block;
-      border-radius: 1.5rem;
-    }
-
-    .hero-content {
-      position: absolute;
-      top: 10%;
-      left: 5%;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3.5rem); 
-      font-weight: 200;
-      margin: 0;
-    }
-
-    .hero p {
-      margin: 15px 0;
-      font-size: clamp(0.8rem, 1.2vw, 1rem);
-    }
-
-    .hero button {
-      padding: 0.6rem 1.5rem;
-      border: none;
-      border-radius: 20rem;
-      background: black;
-      color: white;
-      font-size: clamp(0.6rem, 1vw, 0.9rem);
-      cursor: pointer;
-    }
-
-    .hero button:hover {
-      background: gray;
-    }
-
-    .side-images {
-      flex: 1; 
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      min-width: 250px;
-    }
-
-    .image-card {
-      position: relative;
-    }
-
-    .image-card img {
-      width: 100%;
-      border-radius: 1.5rem;
-      display: block;
-    }
-
-    .image-card h2 {
-      position: absolute;
-      top: 10%;
-      left: 8%;
-      margin: 0;
-      font-size: clamp(1.2rem, 2vw, 2rem);
-      font-weight: 100;
-      color: black;
-    }
-
-    .trending-section {
-      padding: 30px;
-    }
-
-    .trending-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .trending-header p {
-      font-size: 20px;
-      font-weight: bold;
-      margin-right: auto;
-    }
-
-    .trending-header button {
-      border: none;
-      background: #f2f2f2;
-      padding: 8px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .trending-grid1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 2fr;
-      gap: 10px;
-      justify-items: center;
-    }
-
-    .trending-grid2 {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 10px;
-      justify-items: center;
-    }
-
-    .card {
-      position: relative;
-      background: transparent;
-      border-radius: 20px;
-      
-      text-align: center;
-    }
-
-    .small img {
-      width: 100%;
-      height: 250px;
-      
-      display: block;
-      border-radius: 20px;
-    }
-
-    .big img {
-      width: 100%;
-      height: 250px;
-      display: block;
-      border-radius: 20px;
-
-    }
-
-    .card h3 {
-      margin: 10px 0 5px;
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .wishlist {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: white;
-      border-radius: 50%;
-      padding: 6px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .wishlist i {
-      color: #888;
-    }
-
-    .wishlist.active i {
-      color: red;
-    }
-
-    @media (max-width: 900px) {
-      .header { display: none; }
-      .mobile-header { display: flex; }
-      .hero-section { flex-direction: column; align-items: center; }
-      .side-images { flex-direction: row; justify-content: center; }
-      .side-images .image-card { flex: 1; }
-      .trending-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 600px) {
-      .trending-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="header">
@@ -371,5 +105,69 @@
       </div>
     </div>
   </div>
+
+  <hr>
+
+  <div>
+    <div class="Explorebycolors-section">
+      <h2>Explore <br> by Colors</h2>
+      <div class="one">
+      <button>
+        <div class="circle" style="background-color: rgb(224, 85, 85);"></div>
+        RED PASTEL
+      </button>
+      <button>
+        <div class="circle" style="background-color: limegreen;"></div>
+        LIME GREEN
+      </button>
+      <button>
+        <div class="circle" style="background-color: navy;"></div>
+        NAVY BLUE
+      </button>
+      <button>
+        <div class="circle" style="background-color: rgb(240, 237, 237);"></div>
+        CLEAN WHITE
+      </button>
+    </div>
+    <div class="two">
+      <button>
+        <div class="circle" style="background-color: skyblue;"></div>
+        BLUE SKY
+      </button>
+      <button>
+        <div class="circle" style="background-color: purple;"></div>
+        PIURPLE
+      </button>
+      <button>
+        <div class="circle" style="background-color: pink;"></div>
+        PINK
+      </button>
+      <button>
+        <div class="circle" style="background-color: yellow;"></div>
+        YELLOW
+      </button>
+      <button>
+        <div class="circle" style="background-color: darkgreen;"></div>
+        DARK GREEN
+      </button>
+      
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="testimoni-section">
+    <img src="images/57cd86eaec4b399b54263e873dd87745943b8f88.png">
+    <div>
+      <p>What people said</p>
+      <h2>Love the way they handle the order.</h2>
+      <p>Very professional and friendly at the same time. They packed the order on schedule and the detail of their wrapping is top notch. One of my best experience for buying online items. Surely will come back for another purchase.</p>
+      <p>Samantha William</p>
+      <p>Fashion Enthusiast</p>
+    </div>
+
+  </div>
+
+
 </body>
 </html>

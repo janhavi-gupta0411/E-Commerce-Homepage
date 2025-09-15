@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+
   font-family: Arial, sans-serif;
   background: #fafafa;
 }
@@ -46,6 +46,14 @@ body {
   outline: none;
   flex: 1;
   font-size: 16px;
+}
+
+.nav {
+  color: #8a8a8a;
+  padding: 5px;
+}
+.nav p:hover {
+  color: #000;
 }
 
 .search-box i {
@@ -175,6 +183,10 @@ body {
   font-weight: bold;
   margin-right: auto;
   margin-left: 15px;
+}
+
+.name{
+  font-size: 3rem;
 }
 
 .trending-header button {
@@ -309,24 +321,43 @@ body {
   border-radius: 5rem;
   font-size: 0.8rem;
   white-space: nowrap;
-}
+} 
 
-.testimoni-section{
-  height: 100%;
-  width: 80rem;
-  overflow: hidden;
-}
-
-.testimoni-section img{
-  height: 100%;
+.testimoni-section {
+  position: relative;
   width: 100%;
-  padding: 5rem 5rem;
-  object-fit: cover;
-  object-position: left;
-
+  max-height: 35rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
 }
 
+.testimoni-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: left;  
+  display: block;
+}
 
+.testimoni-section-para {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  max-width: 40%;         
+  color: white;        
+  z-index: 2;
+}
+
+.testimoni-section-para h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.testimoni-section-para p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
 
 
 

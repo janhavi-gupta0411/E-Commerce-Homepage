@@ -20,9 +20,9 @@ body {
   cursor: pointer;
 }
 
-.header img {
-  width: 120px;
-  margin-left: 100px;
+.header div img {
+  height: 20px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -355,7 +355,164 @@ body {
 
 .testimoni-section-para p {
   font-size: 1rem;
+  color: #8d8b8b;
+}
+
+.testimoni-section-para h3{
+  font-size: 1.5rem;
+}
+
+.Service-section{
+  padding: 3%;
+}
+
+.Service-section div h2{
+  display: flex;
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 2%;
+  margin-top: 0;
+}
+
+.Service-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+  gap: 20px;
+  justify-content: space-around;
+
+}
+
+.Service-card div h4{
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.Service-card div p{
+  font-size: 1rem;
+  font-weight: 10;
+  color: #393939;
+}
+
+.blog-section{
+  padding: 4rem;
+}
+
+.blog-section div p{
+  display: flex;
+  justify-content: flex-start;
+  font-size: larger;
+}
+
+.blog-card{
+  display: flex;
+  gap: 30px;
+}
+
+.blog-card img{
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1.8rem;
+}
+
+.blog-card div h2{
+  font-size: 3.9rem;
+  margin: 0;
+}
+
+.blog-card div p{
+  font-size: 1.5rem;
+}
+
+.blog-card div button{
+  height: 4rem;
+  width: 14rem;
+  border-radius: 2rem;
+}
+
+.blog-card div{
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  gap: 20px;
+}
+
+footer{
+  background-color: #1c1c1c;
+  display: flex;
+  gap: 7rem;
+  flex-wrap: wrap;
+  padding: 5%;
+  margin: 0;
+}
+
+.foot-left{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.foot-left h3{
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  color: #f9f9f9;
+}
+
+.foot-left p{
+  color: rgb(109, 107, 107);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.foot-left div input{
   
+  border-radius: 0.5rem;
+  flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    background-color: #333;
+    color: #fff;
+}
+
+
+.foot-left div button{
+  padding: 12px 25px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+
+.foot-right{
+  display: flex;
+  gap: 70px;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.foot-right div h5{
+  font-size: 1.2rem;
+  color: white;
+}
+
+.foot-right div ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.foot-right div ul li{
+  margin-bottom: 15px;
+  color: rgb(109, 107, 107);
 }
 
 

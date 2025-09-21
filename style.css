@@ -1,93 +1,135 @@
-.page{
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.search-bar{
+.header h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   gap: 5%;
+  margin-bottom: 20px;
+  width: 80%;
 }
 
-.search-bar button{
+.search-bar button {
   flex: 1;
+  padding: 8px;
+  border: none;
+  background: #222;
+  color: white;
+  border-radius: 6px;
 }
 
+.search-bar button:hover {
+  background: #444;
+}
 
 .search-box {
   display: flex;
-  flex: 20;
+  flex: 2;
   align-items: center;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 30px;
   padding: 8px 15px;
-  width: 300px;
+  max-width: 300px;
 }
-    
-    .search-box input {
-      border: none;
-      outline: none;
-      flex: 1;
-      font-size: 16px;
-    }
 
-    .search-box i {
-      color: black;
-    }
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
 
-    .anime-section { 
-      display: flex;
-      gap: 20px; 
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 2%;
-      
-    }
+.search-box i {
+  color: rgb(97, 95, 95);
+}
 
-    .amine-card{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 5%;
-      align-items: center;
-    }
+.anime-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  padding: 2%;
+}
 
-    .amine-card img{
-      display: inline-block;
-      height: auto ;
-      width: 85% ;
-    }
-    
-    .amine-card h2{
-      margin: 0%;
-    }
+.amine-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
 
-    .amine-card p{
-      margin: 0;
-    }
 
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      height: 8%;
-    }
-    
-    .prev {
-      left: 10px;
-    }
-    
-    .next {
-      right: 10px;
-    }
 
-    .prev button , .next button {
-      font-size: 4rem;
-    }
-    
+.amine-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
-   
+.amine-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.amine-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .anime-section {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .anime-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  height: 8%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev button, .next button {
+  font-size: 4rem;
+  background-color: #c2bebe;
+  border: none;
+  border-radius: 20%;
+  color: #222;
+  cursor: pointer;
+}
+
+.prev button:hover, .next button:hover {
+  color: #555;
+}
